@@ -4,16 +4,16 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     [SerializeField]
-    public float Speed;
+    float Speed;
 
-    private PhotonView myView;
+    private PhotonView photonView;
     private void Start() {
-        myView = GetComponent<PhotonView>();
+        photonView = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update() {
-        if (!myView.IsMine && PhotonNetwork.IsConnected) {
+        if (!photonView.IsMine && PhotonNetwork.IsConnected) {
             return;
         }
 
