@@ -150,7 +150,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4092e7eb5ef88040a01b52a51cc8722, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplayerSceneIndex: 1
   maxPlayers: 2
 --- !u!4 &1288474294
 Transform:
