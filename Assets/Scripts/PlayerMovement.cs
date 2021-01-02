@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour {
     float Speed;
 
     private PhotonView photonView;
+    private float x;
+    private float y;
+
     private void Start() {
         photonView = GetComponent<PhotonView>();
     }
@@ -17,9 +20,11 @@ public class PlayerMovement : MonoBehaviour {
             return;
         }
 
-        var x = Input.GetAxisRaw("Horizontal") * Speed;
-        var y = Input.GetAxisRaw("Vertical") * Speed;
+        x = Input.GetAxisRaw("Horizontal") * Speed;
+        y = Input.GetAxisRaw("Vertical") * Speed;
+    }
 
+    void FixedUpdate() {
         transform.position += new Vector3(x, y);
     }
 }

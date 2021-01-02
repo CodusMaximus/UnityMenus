@@ -6,6 +6,9 @@ public class ShootBullet : MonoBehaviour {
     [SerializeField]
     GameObject bulletPrefab;
 
+    [SerializeField]
+    Transform shootPoint;
+
     PhotonView photonView;
     void Start() {
         photonView = GetComponent<PhotonView>();
@@ -22,10 +25,10 @@ public class ShootBullet : MonoBehaviour {
 
     void Shoot() {
         if (PhotonNetwork.IsConnected) {
-            PhotonNetwork.Instantiate("Bullet", transform.position, transform.rotation);
+            PhotonNetwork.Instantiate("Bullet", shootPoint.position, shootPoint.rotation);
         }
         else {
-            Instantiate(bulletPrefab, transform.position, transform.rotation);
+            Instantiate(bulletPrefab, shootPoint.position, shootPoint.rotation);
         }
     }
 }

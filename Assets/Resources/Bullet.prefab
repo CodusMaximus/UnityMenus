@@ -11,12 +11,14 @@ GameObject:
   - component: {fileID: 6946553059870841698}
   - component: {fileID: 7194509673238814424}
   - component: {fileID: 6464146247004604599}
+  - component: {fileID: 2958449740901677737}
   - component: {fileID: 2459235421526287334}
   - component: {fileID: 5399773335451141429}
   - component: {fileID: 7545441377460628235}
+  - component: {fileID: 514217133993119215}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,6 +101,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2958449740901677737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712913156742004727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53dcf0eab9ac2a84a982f2ecf984cb3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &2459235421526287334
 Rigidbody2D:
   serializedVersion: 4
@@ -159,3 +173,19 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!58 &514217133993119215
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3712913156742004727}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 85e6be052ae07114b9f6f24b78d8c0b2, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.25
